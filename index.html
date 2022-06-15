@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS's JS Calculators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <P class="mainHeading"> JavaScript Calculators</P>
+
+    <!-- Body mass index ccalculation -->
+	<div class="bmiBox">
+    <h1>Body Mass Index Calculator</h1>
+    <img src="bmiguy1-removebg-preview.png" alt="" class="pics">
+		<p id="intro">Calculate your BMI (body mass index) by using the form on the left. Enter your weight and height in meters(eg. '1.75') and click the Calculate button to display your BMI result.</p>
+		<form action="none" method="post" name="bmiform">
+			<fieldset>
+                <!-- legend puts the teext inside the border of a fieldset -->
+			<legend>Height and Weight</legend>
+				<label for="kilograms">Weight (kg's):</label>
+				<input type="text" name="kilograms" id="kilograms">
+				<br>
+				<label for="meters">Height (m's):</label>
+				<input type="text" name="meters" id="meters">
+				<br>
+				<button type="button" name="calculate" value="Calculate your BMI" onclick="calcBMI()">Click to Calculate</button>
+			</fieldset>
+			<fieldset>
+			<legend>BMI</legend>
+				<label for="bmi" id="bmi_label">Your calculated BMI is:</label>
+				<input type="text" name="bmi" id="bmi" readonly="readonly">
+			</fieldset>
+		</form>
+	</div>
+
+    <!-- for the temperature converstion -->
+    <div class="tempBox">
+  	<h1>Temperature Convertor</h1>
+      <img class="pics2" src="thermometer-removebg-preview.png" alt="">
+      <p id="intro">Convert your temperature by using the form on the left. Enter the temperature numericle value and click button that you need to convert to and watch your converted temp be diplayed.</p>
+		<form>
+            <fieldset>
+            <legend>Celsius or Fahrenheit</legend>
+				<label for="userInput">Enter your number to convert:</label>
+				<input type="number" id="userInput">
+			
+
+					<input type="button" value="To Celsius" onclick="toCelsius()">
+					<input type="button" value="To Fahrenheit" onclick="toFahrenheit()">
+				</fieldset>
+      </form>
+      <fieldset class="resultbox">
+        <legend> Result </legend>
+			<p id ="result"></p>
+        </div>
+    </fieldset>
+		</div>
+	
+
+    <!-- footer -->
+  <footer>
+    <p>designed by :</p>
+    ~~ Jesse ~~
+  </footer>
+
+ <script src="script.js"></script>   
+</body>
+</html>
